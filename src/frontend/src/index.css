@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* Mint/Green theme */
+    --background: 0.959 0.023 162.5;
+    --foreground: 0.197 0.016 200.0;
+    --card: 1 0 0;
+    --card-foreground: 0.197 0.016 200.0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.197 0.016 200.0;
+    --primary: 0.548 0.122 162.5;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.949 0.038 162.5;
+    --secondary-foreground: 0.548 0.122 162.5;
+    --muted: 0.949 0.025 162.5;
+    --muted-foreground: 0.518 0.016 200.0;
+    --accent: 0.949 0.038 162.5;
+    --accent-foreground: 0.548 0.122 162.5;
+    --destructive: 0.628 0.225 27.0;
+    --destructive-foreground: 1 0 0;
+    --border: 0.929 0.012 162.5;
+    --input: 0.929 0.012 162.5;
+    --ring: 0.548 0.122 162.5;
+    --status-available: 0.723 0.178 145.0;
+    --status-busy: 0.628 0.225 27.0;
+    --status-travelling: 0.748 0.172 65.0;
+    --chart-1: 0.548 0.122 162.5;
+    --chart-2: 0.723 0.178 145.0;
+    --chart-3: 0.628 0.225 27.0;
+    --chart-4: 0.748 0.172 65.0;
+    --chart-5: 0.6 0.1 200.0;
+    --sidebar: 0.985 0 0;
+    --sidebar-foreground: 0.197 0.016 200.0;
+    --sidebar-primary: 0.548 0.122 162.5;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.949 0.038 162.5;
+    --sidebar-accent-foreground: 0.548 0.122 162.5;
+    --sidebar-border: 0.929 0.012 162.5;
+    --sidebar-ring: 0.548 0.122 162.5;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .status-available {
+    color: oklch(var(--status-available));
+  }
+  .status-busy {
+    color: oklch(var(--status-busy));
+  }
+  .status-travelling {
+    color: oklch(var(--status-travelling));
+  }
+  .bg-status-available {
+    background-color: oklch(var(--status-available));
+  }
+  .bg-status-busy {
+    background-color: oklch(var(--status-busy));
+  }
+  .bg-status-travelling {
+    background-color: oklch(var(--status-travelling));
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
